@@ -18,27 +18,27 @@ function gwiz_batcher() {
 
 	require_once( plugin_dir_path( __FILE__ ) . 'class-gwiz-batcher.php' );
 
-	new Gwiz_Batcher( array(
-		'title'        => 'GW Batcher',
-		'id'           => 'gw-batcher',
-		'size'         => 25,
-		'get_items'    => function ( $size, $offset ) {
-
-			$paging  = array(
-				'offset'    => $offset,
-				'page_size' => $size,
-			);
-
-			$entries = GFAPI::get_entries( null, array(), null, $paging, $total );
-
-			return array(
-				'items' => $entries,
-				'total' => $total,
-			);
-		},
-		'process_item' => function ( $entry ) {
-			// Process the item here.
-		},
-	) );
-
+	// Example configuration
+	//  new Gwiz_Batcher( array(
+	//      'title'        => 'GW Batcher',
+	//      'id'           => 'gw-batcher',
+	//      'size'         => 25,
+	//      'get_items'    => function ( $size, $offset ) {
+	//
+	//          $paging  = array(
+	//              'offset'    => $offset,
+	//              'page_size' => $size,
+	//          );
+	//
+	//          $entries = GFAPI::get_entries( null, array(), null, $paging, $total );
+	//
+	//          return array(
+	//              'items' => $entries,
+	//              'total' => $total,
+	//          );
+	//      },
+	//      'process_item' => function ( $entry ) {
+	//          // Process the item here.
+	//      },
+	//  ) );
 }
