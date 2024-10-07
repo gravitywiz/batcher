@@ -1,4 +1,4 @@
-# Gravity Wiz Batcher
+# Gravity Wiz Batcher [![Packagist Version](https://img.shields.io/packagist/v/gravitywiz/batcher)](https://packagist.org/packages/gravitywiz/batcher)
 
 A class for bulk processing items in batches. Useful for migration routines, updating entries, generating content, and more.
 
