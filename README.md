@@ -10,7 +10,7 @@ Install the Gravity Wiz Batcher and Jetpack Autoloader. Allow Jetpack Autoloader
 will help prevent conflicts with other plugins using this same class.
 
 ```bash
-composer require gravitywiz/gwiz-batcher automattic/jetpack-autoloader
+composer require gravitywiz/batcher automattic/jetpack-autoloader
 ```
 
 Then, create a new plugin file and include the following code:
