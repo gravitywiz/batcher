@@ -1,6 +1,6 @@
 {
     "name": "gravitywiz/batcher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A class for bulk processing items in batches. Useful for migration routines, updating entries, generating content, and more.",
     "license": [
         "GPL-2.0-or-later"
