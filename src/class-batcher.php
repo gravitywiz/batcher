@@ -85,19 +85,32 @@ class Batcher {
 		ob_start();
 		?>
 		<style>
+
+			.gform-settings-save-container {
+				flex-wrap: wrap;
+			}
+
 			#gwb-progress-container {
 				display: none;
 				align-items: center;
 				gap: 16px;
-				flex: 1;
+				width: 100%;
+				flex: none;
+				border-top: 1px solid #E4ECF6;
+			}
+
+			#gwb-preview-label {
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 1;
 			}
 
 			#gwb-preview {
-				background: #f0f0f1;
-				border-radius: 4px;
-				height: 44px;
+				background: #DCE7F4;
+				border-radius: 22px;
+				height: 1.7rem;
 				flex: 1;
-				max-width: 300px;
+				max-width: 100%;
 				overflow: hidden;
 			}
 
@@ -105,8 +118,8 @@ class Batcher {
 				display: block;
 				height: 100%;
 				width: 0;
-				background: linear-gradient(90deg, #2271b1 0%, #135e96 100%);
-				border-radius: 4px;
+				background: #0f3d6c;
+				border-radius: 0;
 				transition: width 0.3s ease;
 			}
 
@@ -234,7 +247,7 @@ class Batcher {
 
 					// Hide success/error banners and show progress bar when starting a new batch
 					$('#gwb-success, #gwb-error').hide();
-					$progressContainer.css('display', 'flex');
+					$progressContainer.css('display', 'block');
 					$preview.find('span').width('0%');
 
 					if ($('select#gwb-form').length) {
@@ -340,6 +353,7 @@ class Batcher {
 		<div class="gform-settings-save-container">
 			<button id="gwb-start" class="button primary large"><?php esc_html_e( 'Start Batch', 'gravityforms' ); ?></button>
 			<div id="gwb-progress-container">
+				<p id="gwb-preview-label"><?php esc_html_e( 'Processing batch…', 'gravityforms' ); ?></p>
 				<div id="gwb-preview"><span></span></div>
 			</div>
 			<div class="alert gforms_note_success" id="gwb-success" style="display: none;" role="alert">
